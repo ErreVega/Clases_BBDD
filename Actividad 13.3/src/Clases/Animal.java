@@ -1,21 +1,19 @@
 package Clases;
 
 public class Animal {
-   private String   nombre,
-                    color,
-                    tipoComida,
-                    cuidador,
-                    carEspeciales,
-                    ubicación;
+    private String nombre,
+            color,
+            tipoComida,
+            cuidador,
+            carEspeciales,
+            ubicación;
 
-   private int      edad,
-                    numID,
-                    cantidadComida; //(kgs/día);
-
-   private static int nextID = 1000;
+    private int edad,
+            cantidadComida; //(kgs/día);
 
 
-
+    public Animal() {
+    }
 
     public Animal(String nombre, int edad, String color, String tipoComida, int cantidadComida,
                   String cuidador, String carEspeciales, String ubicación) {
@@ -27,14 +25,7 @@ public class Animal {
         this.cuidador = cuidador;
         this.carEspeciales = carEspeciales;
         this.ubicación = ubicación;
-        this.numID = nextID++;
     }
-
-    public Animal(String nombre){
-        this.nombre = nombre;
-        this.numID = nextID++;
-    }
-
 
 
     public String getNombre() {
@@ -100,12 +91,5 @@ public class Animal {
     public void setUbicación(String ubicación) {
         this.ubicación = ubicación;
     }
-
-    public int getNumID() {
-        return numID;
-    }
-
-    public void setNumID(int numID) {
-        this.numID = numID;
-    }
 }
+
